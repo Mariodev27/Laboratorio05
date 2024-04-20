@@ -5,42 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Laboratorio05"
         mc:Ignorable="d"
-        Title="MainWindow" Height="820" Width="800">
+        Title="Lab CRUD" Height="820" Width="800">
     <Grid>
-        <Label Content="ID del Cliente:" HorizontalAlignment="Left" Margin="20,20,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtIdCliente" HorizontalAlignment="Left" Margin="150,20,0,0" VerticalAlignment="Top" Width="300"/>
-
-        <Label Content="NombreCompañia:" HorizontalAlignment="Left" Margin="20,60,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtCompañia" HorizontalAlignment="Left" Margin="150,60,0,0" VerticalAlignment="Top" Width="300"/>
-
-        <Label Content="NombreContacto: " HorizontalAlignment="Left" Margin="20,100,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtNombreContacto" HorizontalAlignment="Left" Margin="150,100,0,0" VerticalAlignment="Top" Width="300"/>
-
-        <Label Content="CargoContacto:" HorizontalAlignment="Left" Margin="20,140,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtCargoContacto" HorizontalAlignment="Left" Margin="150,140,0,0" VerticalAlignment="Top" Width="300"/>
-
-        <Label Content="Direccion:" HorizontalAlignment="Left" Margin="20,180,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtDireccion" HorizontalAlignment="Left" Margin="150,180,0,0" VerticalAlignment="Top" Width="300"/>
-
-        <Label Content="Ciudad:" HorizontalAlignment="Left" Margin="20,220,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtCiudad" HorizontalAlignment="Left" Margin="150,220,0,0" VerticalAlignment="Top" Width="300"/>
-
-        <Label Content="Region:" HorizontalAlignment="Left" Margin="20,380,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtRegion" HorizontalAlignment="Left" Margin="150,380,0,0" VerticalAlignment="Top" Width="300"/>
-
-        <Label Content="Codigo Postal:" HorizontalAlignment="Left" Margin="20,420,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtCodPostal" HorizontalAlignment="Left" Margin="150,420,0,0" VerticalAlignment="Top" Width="300"/>
-
-        <Label Content="Pais:" HorizontalAlignment="Left" Margin="20,460,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtPais" HorizontalAlignment="Left" Margin="150,460,0,0" VerticalAlignment="Top" Width="300"/>
-
-        <Label Content="Telefono:" HorizontalAlignment="Left" Margin="20,500,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtTelefono" HorizontalAlignment="Left" Margin="150,500,0,0" VerticalAlignment="Top" Width="300"/>
-
-        <Label Content="Fax:" HorizontalAlignment="Left" Margin="20,600,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtFax" HorizontalAlignment="Left" Margin="150,600,0,0" VerticalAlignment="Top" Width="300"/>
-
-        <Button Content="Guardar" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Height="40" Margin="20,740,0,0" Click="Button_click"/>
-
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Orientation="Vertical">
+            <Button Content="CREATE" Click="Create_Click" Margin="5" Background="LightGreen" Width="200" Height="50" FontSize="20"/>
+            <Button Content="READ" Click="Read_Click" Margin="5" Background="LightBlue" Width="200" Height="50" FontSize="20"/>
+            <Button Content="UPDATE" Click="Update_Click" Margin="5" Background="LightYellow" Width="200" Height="50" FontSize="20"/>
+            <Button Content="DELETE" Click="Delete_Click" Margin="5" Background="LightCoral" Width="200" Height="50" FontSize="20"/>
+        </StackPanel>
     </Grid>
 </Window>

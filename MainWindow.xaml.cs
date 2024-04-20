@@ -29,41 +29,38 @@ namespace Laboratorio05
 
         }
 
-        private void Button_click(object sender, RoutedEventArgs e)
+        private void Create_Click(object sender, RoutedEventArgs e)
         {
+            // Crear una nueva instancia de la ventana Create
+            var createWindow = new Create();
+            // Mostrar la ventana Create
+            createWindow.Show();
+        }
 
-            try
-            {
+        private void Read_Click(object sender, RoutedEventArgs e)
+        {
+            // Crear una nueva instancia de la ventana Read
+            var readWindow = new Read();
+            // Mostrar la ventana Create
+            readWindow.Show();
 
-                string connectionString = "Data Source=LAB1504-03\\SQLEXPRESS;Initial Catalog=Neptuno;User ID=Tecsup1;Password=1234";
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
+        }
 
-                    connection.Open();
-                    SqlCommand cmd = new SqlCommand("NuevoEmpleado", connection);
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@idCliente", int.Parse(txtIdCliente.Text));
-                    cmd.Parameters.AddWithValue("@NombreCompania", txtCompañia.Text);
-                    cmd.Parameters.AddWithValue("@NombreContacto", txtNombreContacto.Text);
-                    cmd.Parameters.AddWithValue("@CargoContacto", txtCargoContacto.Text);
-                    cmd.Parameters.AddWithValue("@Direccion", txtDireccion.Text);
-                    cmd.Parameters.AddWithValue("@Ciudad", txtCiudad.Text);
-                    cmd.Parameters.AddWithValue("@Region", txtRegion.Text);
-                    cmd.Parameters.AddWithValue("@CodPostal", txtCodPostal.Text);
-                    cmd.Parameters.AddWithValue("@Pais", txtPais.Text);
-                    cmd.Parameters.AddWithValue("@Telefono", txtTelefono.Text);
-                    cmd.Parameters.AddWithValue("@Fax", txtFax.Text);
-                    cmd.ExecuteNonQuery();
-                    MessageBox.Show("Cliente Creado");
+        private void Update_Click(object sender, RoutedEventArgs e)
+        {
+            // Crear una nueva instancia de la ventana Update
+            var updateWindow = new Update();
+            // Mostrar la ventana Create
+            updateWindow.Show();
 
-                }
+        }
 
-            }catch (Exception ex)
-            {
-
-                MessageBox.Show("Error al insertar cliente: " + ex.Message);
-
-            }
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+            // Crear una nueva instancia de la ventana Delete
+            var deleteWindow = new Delete();
+            // Mostrar la ventana Create
+            deleteWindow.Show();
 
         }
     }
